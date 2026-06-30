@@ -2,7 +2,7 @@
 layout: home
 title: Home
 ---
-# Fields notes from a security engineer
+# Home
 >Field notes are a qualitative approach most often used in ethnography. Field notes are written observations recorded during or immediately following participant observations in the field and are considered critical to understanding phenomena encountered in the field. Field notes are commonly associated with scratch notes, diaries, and journals.
 >
 >(Tenzek, 2017)
