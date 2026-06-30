@@ -28,7 +28,7 @@ In part 1, we'll get data regarding all of the tables in a workspace using the `
 ## What's needed
 We'll need a modern Microsoft Sentinel workspace; so it should be connected to Microsoft Security/XDR portal and the lake should be enabled. 
 
-An account with 
+An account with Log Analytics Reader Azure RBAC role.
 
 ## Constraints
 The biggest constraint is that XDR's schema discovery currently relies on a internal API (`security.microsoft.com/apiproxy/mtp/huntingService/schema`) that doesn't support external application consumption. The `apiproxy` appears to depend on Defender portal session context (cookies, XSRF, workspace context, and proxy rounting). 
