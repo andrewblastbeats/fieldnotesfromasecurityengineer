@@ -120,7 +120,7 @@ active_tables_df = all_tables_df[
     dropna().astype(str)))].
     reset_index(drop=True).copy()
 ```
-|Index  | retentionInDays   | totalRetentionInDays  | plan      | schema.name     |
+| Index | retentionInDays   | totalRetentionInDays  | plan      | schema.name     |
 | ----- | ----------------- | --------------------- | --------- | --------------- |
 | 0     | 31.0              | 31                    | Analytics | SecurityIncident|
 | 1     | 31.0              | 31                    | Analytics | SecurityAlert   |
