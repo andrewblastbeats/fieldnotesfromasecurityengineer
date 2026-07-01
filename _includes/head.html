@@ -1,0 +1,26 @@
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-default.css' | relative_url }}">
+
+  <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-head-nav.css' | relative_url }}" id="jtd-head-nav-stylesheet">
+
+  <style id="jtd-nav-activation">
+  {% include css/activation.scss.liquid %}
+  </style>
+
+  {% if site.search_enabled != false %}
+    <script src="{{ '/assets/js/vendor/lunr.min.js' | relative_url }}"></script>
+  {% endif %}
+
+  <script src="{{ '/assets/js/just-the-docs.js' | relative_url }}"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% include_cached [favicon.html](http://_vscodecontentref_/1) %}
+
+  {% seo %}
+
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="4ae664d8-455e-4d4e-8833-b0de210aec1d"></script>
+</head>
