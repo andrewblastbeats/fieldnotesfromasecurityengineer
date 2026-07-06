@@ -1,2 +1,24 @@
-$link-color: #000000;
-$link-hover-color: #0056d6;
+/* global links (content) */
+a {
+  color: #000000;
+}
+
+a:hover,
+a:focus {
+  color: #0056d6;
+}
+
+/* ensure header matches */
+.site-title,
+.page-link {
+  color: #000000;
+}
+
+.site-title:hover,
+.page-link:hover {
+  color: #0056d6;
+}
+
+.site-footer {
+  display: none !important;
+}
