@@ -1,6 +1,6 @@
 title: Field notes from a security engineer
 description: A collection of technical notes scoped to Microsoft security platforms from a security engineer's perspective.
-remote_theme: minima
+theme: minima
 markdown: kramdown
 
 header_pages:
