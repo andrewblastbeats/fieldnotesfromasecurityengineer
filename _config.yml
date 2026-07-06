@@ -6,3 +6,6 @@ markdown: kramdown
 header_pages:
   - index.md
   - about.md
+
+include:
+  - assets/custom.css
