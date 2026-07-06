@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Home
+#title: Home
 ---
 
 {% assign articles = site.pages | where_exp: "item", "item.path contains 'notes/'" | sort: "date" | reverse %}
