@@ -1,20 +1,2 @@
-/* -----------------------------
-   Link styling (reliable override)
------------------------------- */
-
-a {
-  color: #000000;
-}
-
-a:hover,
-a:focus {
-  color: #0056d6;
-}
-
-/* -----------------------------
-   Footer removal
------------------------------- */
-
-.site-footer {
-  display: none;
-}
+$link-color: #000000;
+$link-hover-color: #0056d6;
