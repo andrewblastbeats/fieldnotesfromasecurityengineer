@@ -1,0 +1,16 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+a,
+a:visited {
+  color: #000;
+  text-decoration: none; /* optional */
+}
+
+a:hover,
+a:focus {
+  color: #0d6efd; /* choose any blue you like */
+  text-decoration: underline; /* optional */
+}

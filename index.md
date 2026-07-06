@@ -2,11 +2,7 @@
 layout: home
 title: Home
 ---
-# Home
 
-This site is a set of technical field notes on Microsoft security platforms.
-
-## Articles
 {% assign articles = site.pages | where_exp: "item", "item.path contains 'notes/'" | sort: "date" | reverse %}
 {% for article in articles %}
 <article>
