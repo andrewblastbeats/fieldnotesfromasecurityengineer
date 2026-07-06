@@ -20,6 +20,8 @@ What's an active table? A Log Analytics Workspace or XDR table that:
 
 Notes: The list isn't exhaustive. The last point is an edge case and would be really difficult to justify.
 
+<!--more-->
+
 ## Introduction
 In this introductory field note we will look at how to identify and catalog tables in Microsoft XDR and Sentinel. 
 
