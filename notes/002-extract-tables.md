@@ -33,18 +33,15 @@ An account with Log Analytics Reader Azure RBAC role and for this part, an Enter
 ## Constraints
 Most organizations are likely in a transition state between Sentinel and Defender and may have rules in both portals.
 
-**Worth nothing:** One thing I discovered during the brainstorming/discovery of this series is that Near Real Time rules aren't surfaced through all paths. The current versions of the Azure SDK for Python and Sentinel API don't include Near Real Time Analytics Rules. We'll rely on a previous API endpoint version. 
+**Worth nothing:** One thing I discovered during the brainstorming/discovery of this series is that Near Real Time rules aren't surfaced through all paths. The current versions of the Azure SDK for Python and Sentinel API don't include Near Real Time Analytics Rules. We'll rely on a previous Azure Management API endpoint version. 
 
 ## Dependencies
 The dependencies are inclusive of previous field notes in the series.
-- [Security Insights - SDK](https://learn.microsoft.com/en-us/python/api/overview/azure/mgmt-securityinsight-readme?view=azure-python)
-- [Security Insights - API](https://learn.microsoft.com/en-us/rest/api/securityinsights/?view=rest-securityinsights-2025-09-01)
 
 ## Import dependencies
 Import the previous note's dependencies and the dependencies below.
 
 ```python
-from azure.mgmt.securityinsight import SecurityInsights
 from msal import ConfidentialClientApplication
 import requests
 import re
@@ -147,10 +144,9 @@ active_tables_df = all_tables_df[
 Using the functions defined above we can get the Analytics Rules. We'll also add a `rule_source` column to the DataFrame and populate it with the source platform, this will be useful after we look at pulling tables and rules from Defender.
 
 ```python
-analytics_rules_df = get_analytics_rules_arm()
+analytics_rules_arm_df = get_analytics_rules_arm()
 
-analytics_rules_df["rule_source"] = "Sentinel"
-detection_rules_df["rule_source"] = "Defender"
+analytics_rules_arm_df["rule_source"] = "Sentinel"
 ```
 
 ### Extract
