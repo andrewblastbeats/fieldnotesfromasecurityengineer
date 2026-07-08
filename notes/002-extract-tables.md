@@ -205,8 +205,8 @@ One thing to note is that Fusion rules aren't associated with a single table; Fu
 Next time we'll perform similar steps for the Defender platform by getting all tables available in Advanced Hunting, all Custom Detection Rules, and extracting the tables referenced in the Detection Rules' queries. In some later field notes we'll even start to pull in rule run counts and look at how often the rules are creating alerts.
 
 ## References 
-Microsoft (n.d.). Feature comparison: Microsoft Sentinel analytics rules and Microsoft Defender custom detections. Microsoft, https://learn.microsoft.com/en-us/azure/sentinel/compare-analytics-rules-custom-detections
+Microsoft (n.d.). Feature comparison: Microsoft Sentinel analytics rules and Microsoft Defender custom detections. Microsoft, [https://learn.microsoft.com/en-us/azure/sentinel/compare-analytics-rules-custom-detections](https://learn.microsoft.com/en-us/azure/sentinel/compare-analytics-rules-custom-detections)
 
-Nutkevitch, N. (2025). Custom detections are now the unified experience for creating detections in Microsoft Defender. Microsoft, https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/custom-detections-are-now-the-unified-experience-for-creating-detections-in-micr/4463875
+Nutkevitch, N. (2025). Custom detections are now the unified experience for creating detections in Microsoft Defender. Microsoft, [https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/custom-detections-are-now-the-unified-experience-for-creating-detections-in-micr/4463875](https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/custom-detections-are-now-the-unified-experience-for-creating-detections-in-micr/4463875)
 
-Microsoft (n.d.). Advanced multistage attack detection in Microsoft Sentinel, https://learn.microsoft.com/en-us/azure/sentinel/fusion
+Microsoft (n.d.). Advanced multistage attack detection in Microsoft Sentinel, [https://learn.microsoft.com/en-us/azure/sentinel/fusion](https://learn.microsoft.com/en-us/azure/sentinel/fusion)
