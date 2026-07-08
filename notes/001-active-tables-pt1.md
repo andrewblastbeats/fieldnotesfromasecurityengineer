@@ -43,6 +43,7 @@ We'll address this gap in another note.
 - [Azure Monitor Query Client](https://learn.microsoft.com/en-us/python/api/azure-monitor-query/azure.monitor.query?view=azure-python)
 - [Pandas](https://pandas.pydata.org/)
 
+https://learn.microsoft.com/en-us/python/api/overview/azure/security-insights?view=azure-python
 ## Import dependencies
 We'll need to import the following:
 ```python
@@ -68,11 +69,13 @@ workspace_id = os.getenv("WORKSPACE_ID")
 credentials = DefaultAzureCredential()
 ```
 
-## Instatiate the `LogAnalyticsManagementClient` class
-Now, create an instance of the `LogAnalyticsManagementClient`. This client provides access to Azure Log Analytics resources, allowing us to enumerate workspaces and retrieve workspace configuration details.
+## Instatiate the `LogAnalyticsManagementClient` and `LogsQueryClient` classes
+Now, create an instance of the `LogAnalyticsManagementClient` and the `LogsQueryClient`. The management client provides access to Log Analytics resources, allowing us to enumerate workspaces and retrieve workspace configuration details. The query class allows us to run KQL queries on Logs Analytics Workspaces.
 
 ```python
 log_analytics_mgmt_client = LogAnalyticsManagementClient(credentials, subscription_id)
+
+log_query_client = LogsQueryClient(credential=credentials)
 ```
 
 ## Wrangle and aggregate the data
@@ -87,10 +90,8 @@ all_tables_df.drop("schema.columns", axis=1, inplace=True)
 ```
 
 ### Wrangle - `Usage`
-Now, we'll get all tables that have had data ingested in the last 90 days.
+Using the `LogsQueryClient`, we'll get all tables that have had data ingested in the last 90 days.
 ```python
-log_query_client = LogsQueryClient(credential=credentials)
-
 query = """
 Usage
 | distinct DataType
