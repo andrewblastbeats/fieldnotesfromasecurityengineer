@@ -208,3 +208,5 @@ Next time we'll perform similar steps for the Defender platform by getting all t
 Microsoft (n.d.). Feature comparison: Microsoft Sentinel analytics rules and Microsoft Defender custom detections. Microsoft, https://learn.microsoft.com/en-us/azure/sentinel/compare-analytics-rules-custom-detections
 
 Nutkevitch, N. (2025). Custom detections are now the unified experience for creating detections in Microsoft Defender. Microsoft, https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/custom-detections-are-now-the-unified-experience-for-creating-detections-in-micr/4463875
+
+Microsoft (n.d.). Advanced multistage attack detection in Microsoft Sentinel, https://learn.microsoft.com/en-us/azure/sentinel/fusion
