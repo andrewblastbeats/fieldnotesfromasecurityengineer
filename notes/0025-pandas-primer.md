@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Analyzing active tables, pt 3
+title: Analyzing active tables, pt 2.5 - quick Pandas primer
 date: 2026-07-14
 tags:
     - pandas
