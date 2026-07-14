@@ -151,6 +151,7 @@ analytics_rules_arm_df["rule_source"] = "Sentinel"
 
 ### Extract
 Remember, we have 2 ways to identify tables in the Log Analytics Workspace: 
+
 1) The Log Analytics Management Client which gives all tables in the workspace
 2) The `Usage` table which returns all tables that have ingested data within a specified period.
 

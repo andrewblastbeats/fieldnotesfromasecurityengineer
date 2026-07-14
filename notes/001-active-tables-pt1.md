@@ -69,7 +69,7 @@ workspace_id = os.getenv("WORKSPACE_ID")
 credentials = DefaultAzureCredential()
 ```
 
-## Instatiate the `LogAnalyticsManagementClient` and `LogsQueryClient` classes
+## Instatiate the classes
 Now, create an instance of the `LogAnalyticsManagementClient` and the `LogsQueryClient`. The management client provides access to Log Analytics resources, allowing us to enumerate workspaces and retrieve workspace configuration details. The query class allows us to run KQL queries on Logs Analytics Workspaces.
 
 ```python
@@ -111,6 +111,7 @@ usage_df.columns = ["DataType"]
 
 ### Reflect
 At this moment, we have:
+
 1) All tables in the Log Analytics workspace with their table plan, retention, and total retention.
 2) All tables that have received data in the last 90 days.
 
