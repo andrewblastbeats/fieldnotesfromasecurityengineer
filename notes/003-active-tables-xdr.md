@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Analyzing active tables, pt 3
-date: 2026-07-06
+date: 2026-07-17
 tags:
     - sentinel
     - xdr
