@@ -10,6 +10,7 @@ tags:
     - tables
     - python
     - kql
+    - pandas
 ---
 # Analyzing active tables, part 3
 So far we've only looked at pulling data from Microsoft Sentinel and Log Analytics. We have been able to pull configuration information from the management plane via the Log Analytics Management Client and Azure Management API.

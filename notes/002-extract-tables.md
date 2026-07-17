@@ -10,6 +10,7 @@ tags:
     - tables
     - python
     - kql
+    - pandas
 ---
 # Analyzing active tables, part 2
 Currently Microsoft has 2 detection methods for their security platform. The first being Analytics Rules in Microsoft Sentinel, from the Azure portal. The second, and preferred method (though not fully featured), is Detection Rules in the Defender portal.  

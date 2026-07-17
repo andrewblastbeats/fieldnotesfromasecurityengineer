@@ -9,6 +9,8 @@ tags:
     - log analytics
     - tables
     - python
+    - kql
+    - pandas
 ---
 # Analyzing active tables, part 1
 What's an active table? A Log Analytics Workspace or XDR table that:
