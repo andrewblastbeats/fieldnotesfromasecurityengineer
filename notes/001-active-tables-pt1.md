@@ -113,6 +113,7 @@ usage_df.columns = ["DataType"]
 At this moment, we have:
 
 1) All tables in the Log Analytics workspace with their table plan, retention, and total retention.
+
 2) All tables that have received data in the last 90 days.
 
 Let's perform an inner join on these two tables by using a mask operation. Remember, an inner join returns only the rows where there is a match in both tables.

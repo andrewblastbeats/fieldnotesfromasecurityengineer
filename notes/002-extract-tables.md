@@ -18,7 +18,11 @@ At the time of this field note there isn't feature parity between Analytics Rule
 
 <!--more-->
 
+## Table of contents
+- #introduction
+
 ## Introduction
+{: #introduction}
 In [part 1](./001-active-tables-pt1.md) we were able to get all tables in a Log Analytics Workspace and determine the tables actively ingesting data, along with each table's plan and retention settings.
 
 In part 2 of this series we'll look at how we can extract table names from Analytics Rules. We'll look at getting Defender tables and Custom Detection Rules in parts 3 and 4, respectively.
@@ -48,7 +52,7 @@ import re
 ```
 
 ## Variables
-The dependencies are inclusive of previous field notes in the series and the following. 
+The variables are inclusive of previous field notes in the series and the following. 
 
 ```python
 tenant_id = os.getenv("TENANT_ID")
@@ -58,6 +62,8 @@ client_secret = os.getenv("CLIENT_SECRET")
 
 ## Prep Azure Management APIs
 With the constraints discussed above in mind, we'll use the Azure Management API to expose the `SecurityInsights` class, which allows us to interact with resources exposed by the `Microsoft.SecurityInsights` resource provider. 
+
+We use the `2022-11-01-preview` API endpoint because it surfaces Near Real-Time rules.
 
 ### Azure Management
 ```python
@@ -152,7 +158,8 @@ analytics_rules_arm_df["rule_source"] = "Sentinel"
 ### Extract
 Remember, we have 2 ways to identify tables in the Log Analytics Workspace: 
 
-1) The Log Analytics Management Client which gives all tables in the workspace
+1) The Log Analytics Management Client which gives all tables in the workspace.
+
 2) The `Usage` table which returns all tables that have ingested data within a specified period.
 
 There are times where Analytics Rules are querying tables that haven't recently ingested data. We'll use the `all_tables_df` as our source of truth for tables in the Sentinel workspace. 
