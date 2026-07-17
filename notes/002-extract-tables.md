@@ -12,7 +12,6 @@ tags:
     - kql
     - pandas
 ---
-# Analyzing active tables, part 2
 Currently Microsoft has 2 detection methods for their security platform. The first being Analytics Rules in Microsoft Sentinel, from the Azure portal. The second, and preferred method (though not fully featured), is Detection Rules in the Defender portal.  
 
 At the time of this field note there isn't feature parity between Analytics Rules and Detection Rules.
@@ -20,10 +19,17 @@ At the time of this field note there isn't feature parity between Analytics Rule
 <!--more-->
 
 ## Table of contents
-- #introduction
+- [Introduction](#introduction)
+- [What's needed](#whats-needed)
+- [Constraints](#constraints)
+- [Dependencies](#dependencies)
+- [Variables](#variables)
+- [Prep Azure Management APIs](#prep-azure-management-apis)
+- [Wrangle and aggregate the data](#wrangle-and-aggregate-the-data)
+- [Wrap up](#wrap-up)
+- [References](#references)
 
 ## Introduction
-{: #introduction}
 In [part 1](./001-active-tables-pt1.md) we were able to get all tables in a Log Analytics Workspace and determine the tables actively ingesting data, along with each table's plan and retention settings.
 
 In part 2 of this series we'll look at how we can extract table names from Analytics Rules. We'll look at getting Defender tables and Custom Detection Rules in parts 3 and 4, respectively.
@@ -43,7 +49,7 @@ Most organizations are likely in a transition state between Sentinel and Defende
 ## Dependencies
 The dependencies are inclusive of previous field notes in the series.
 
-## Import dependencies
+### Import dependencies
 Import the previous note's dependencies and the dependencies below.
 
 ```python

@@ -12,15 +12,23 @@ tags:
     - kql
     - pandas
 ---
-# Analyzing active tables, part 3
 So far we've only looked at pulling data from Microsoft Sentinel and Log Analytics. We have been able to pull configuration information from the management plane via the Log Analytics Management Client and Azure Management API.
 
 <!--more-->
 
+## Table of contents
+- [Introduction](#introduction)
+- [Dependencies](#dependencies)
+- [Variables](#variables)
+- [Define functions](#define-functions)
+- [Wrangle the data](#wrangle-the-data)
+- [Wrap up](#wrap-up)
+- [References](#references)
+
 ## Introduction
 In this field note we'll get the Advanced Hunting Schema and the Custom Detection Rules from the Graph Security API.
 
-## Import dependencies
+## Dependencies
 Import the necessary dependencies from the previous notes.
 
 ## Variables

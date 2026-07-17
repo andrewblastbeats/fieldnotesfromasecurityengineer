@@ -6,11 +6,21 @@ tags:
     - pandas
     - python
 ---
-
-# Analyzing active tables, part 2.5... making sense of the metadata and Pandas
+# Making sense of the metadata and Pandas
 I jumped right into writing these field notes without much primer. I don't show trivial configurations, like creating environmental variables and Entra Enterprise Applications, because there's plenty of available material that does.
 
 I do want to take a quick pause to actually look at what we're doing with Pandas, as it'll be heavily used throughout this series on Sentinel and XDR. 
+
+## Table of contents
+- [Introduction](#introduction)
+- [Dependencies](#dependencies)
+- [Series](#series)
+- [Data in, DataFrame out](#data-in-dataframe-out)
+- [DataFrame from dictionaries](#dataframe-from-dictionaries)
+- [Accessing data in a DataFrame](#accessing-data-in-a-dataframe)
+- [Removing data](#removing-data)
+- [Wrap up](#wrap-up)
+- [References](#references)
 
 ## Introduction
 Through this series, and likely others, Pandas is going to show up and be used a lot. We'll use it to organize API responses, compare configurations, summarize telemetry, identify trends, and make larger datasets easier to reason about. 
@@ -21,7 +31,7 @@ Pandas is easy to use without actually understanding what it's truly capable of;
 
 Pandas has (2) core data structures that almost every function and method is built around: Series and DataFrames. Understanding these two objects goes a long way toward understanding Pandas. We'll spend most of our time using DataFrames but we'll still introduce Series.
 
-## Import dependencies
+## Dependencies
 Pandas is usually imported as an alias, `pd`.
 
 ```python

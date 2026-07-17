@@ -12,7 +12,6 @@ tags:
     - kql
     - pandas
 ---
-# Analyzing active tables, part 1
 What's an active table? A Log Analytics Workspace or XDR table that:
 - has data flowing into it,
 - is associated with enabled Analytics or Detection Rules,
@@ -23,6 +22,17 @@ What's an active table? A Log Analytics Workspace or XDR table that:
 Notes: The list isn't exhaustive. The last point is an edge case and would be really difficult to justify.
 
 <!--more-->
+
+## Table of contents
+- [Introduction](#introduction)
+- [What's needed](#whats-needed)
+- [Constraints](#constraints)
+- [Dependencies](#dependencies)
+- [Variables](#variables)
+- [Instatiate the classes](#instatiate-the-classes)
+- [Wrangle and aggregate the data](#wrangle-and-aggregate-the-data)
+- [Wrap up](#wrap-up)
+
 
 ## Introduction
 In this introductory field note we will look at how to identify and catalog tables in Microsoft XDR and Sentinel. 
@@ -46,7 +56,7 @@ We'll address this gap in another note.
 - [Pandas](https://pandas.pydata.org/)
 
 https://learn.microsoft.com/en-us/python/api/overview/azure/security-insights?view=azure-python
-## Import dependencies
+### Import dependencies
 We'll need to import the following:
 ```python
 import os
