@@ -251,12 +251,13 @@ I recently created these detection rules, which is why  You should have somethin
 ```python
 detection_rules_df[["id", "name", "alerts_per_run", "alert_count", "run_count", "frequency_hours", "tables", "platform"]]
 ```
+
 |     | id | name                    | alerts_per_run | alert_count | run_count | frequency_hours | tables      | platform |
 | --- | -- | ----------------------- | -------------- | ------------| --------- | --------------- | ----------- | -------- |
 | 0   | 23 | Custom detection rule 1 |  0.0556        | 40.0        |   720.0   | 1.0             | [SigninLogs]| Defender |
 | 1   | 55 | Custom detection rule 2 |  0.2167        | 78.0        |   360.0   | 2.0             | [DeviceProcessEvents]| Defender |
 | 2   | 41 | Custom detection rule 3 |  NaN           | 4.0         |   NaN     | 0.0             | [SigninLogs]| Defender |
-| ... | ...| ...                     | ...            | ...         | ...       | ...             | ...         | ...      |
+| ... | ...| ...                     | ...            | ...         | ...       | ...             | ...         | Defender |
 
 If we look closely at the third rule, we can determine that it's a type of Near Real-Time rule. We can also look at the `schedule.frequency` column in the `detection_rules_df` DataFrame.
 
