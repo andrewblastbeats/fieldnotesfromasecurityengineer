@@ -24,6 +24,8 @@ Orginally I wanted to have this entry focus on normalization, via mapping of fea
 - [Variables](#variables)
 - [Define functions to get Defender and Sentinel data](#define-functions-to-get-defender-and-sentinel-data)
 - [Get and aggregate data](#get-and-aggregate-data)
+- [Pause](#pause)
+- [Table activity](#table-activity)
 - [Wrap up](#wrap-up)
 - [References](#references)
 
