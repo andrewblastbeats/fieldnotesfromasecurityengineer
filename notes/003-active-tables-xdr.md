@@ -147,6 +147,8 @@ At this point we have:
 ## Wrap up
 Next time we'll look at normalizing our table DataFrames so that we have one DataFrame for all detection rules and one DataFrame for all tables.
 
+(We won't normalize in the [next note](./004-active-tables-activity.md) but we will eventually.)
+
 ## References
 Microsoft (2026). Create custom detection rules in Microsoft Defender XDR. Microsoft, https://github.com/MicrosoftDocs/defender-docs/blob/public/defender-xdr/custom-detection-rules.md
 

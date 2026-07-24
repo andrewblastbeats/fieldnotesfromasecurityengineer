@@ -155,3 +155,5 @@ Next, we used the `LogsQueryClient` class to query the `Usage` table and get the
 Then, we joined the two DataFrames together, but only where the table name was in both the Log Analytics workspace **and** has ingested data, to create a single DataFrame that includes the retention settings, table plan type, and table name.
 
 **Next time:** We'll start looking at Analytics and Detection Rules and extract the tables used in the queries. 
+
+Here's [note 2](./002-extract-tables.md).

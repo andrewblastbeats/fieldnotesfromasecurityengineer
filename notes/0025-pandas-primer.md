@@ -187,7 +187,7 @@ Columns and rows can be dropped from DataFrames using the `drop()` method. We dr
 The `axis=1` parameter instructs the method to operate on columns labeled `schema.columms`. Finally, `inplace=True` updates the specified DataFrame.
 
 ## Wrap up
-Next time we'll look at interacting with the Advanced Hunting tables in Defender.
+In the [next note](./003-active-tables-xdr.md) we'll look at interacting with the Advanced Hunting tables in Defender.
 
 ## References
 Pydata. API reference, https://pandas.pydata.org/docs/reference/index.html

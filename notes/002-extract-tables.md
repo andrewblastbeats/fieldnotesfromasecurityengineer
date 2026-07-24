@@ -218,6 +218,8 @@ One thing to note is that Fusion rules aren't associated with a single table; Fu
 ## Wrap up
 Next time we'll perform similar steps for the Defender platform by getting all tables available in Advanced Hunting, all Custom Detection Rules, and extracting the tables referenced in the Detection Rules' queries. In some later field notes we'll even start to pull in rule run counts and look at how often the rules are creating alerts.
 
+Here's the [next note](./0025-pandas-primer.md).
+
 ## References 
 Microsoft (n.d.). Feature comparison: Microsoft Sentinel analytics rules and Microsoft Defender custom detections. Microsoft, [https://learn.microsoft.com/en-us/azure/sentinel/compare-analytics-rules-custom-detections](https://learn.microsoft.com/en-us/azure/sentinel/compare-analytics-rules-custom-detections)
 
