@@ -114,7 +114,7 @@ timespan = timedelta(days=90)
 results = log_query_client.query_workspace(
     workspace_id=workspace_id,
     query=query,
-    timespan=timespan
+    timespan=timespan,
 )
 
 usage_df = pd.DataFrame([item for item in results.tables[0].rows])
@@ -132,10 +132,9 @@ Let's perform an inner join on these two tables by using a mask operation. Remem
 
 ```python
 active_tables_df = all_tables_df[
-    all_tables_df["schema.name"].
-    isin(set(usage_df["DataType"].
-    dropna().astype(str)))].
-    reset_index(drop=True).copy()
+    all_tables_df["schema.name"]
+    .isin(set(usage_df["DataType"]
+    .dropna().astype(str)))].reset_index(drop=True).copy()
 ```
 
 | Index | retentionInDays   | totalRetentionInDays  | plan      | schema.name     |

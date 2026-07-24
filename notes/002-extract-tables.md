@@ -78,7 +78,7 @@ def get_azure_mgmt_token(tenant_id, client_id, client_secret):
     app = ConfidentialClientApplication(
         client_id=client_id,
         client_credential=client_secret,
-        authority=f"https://login.microsoftonline.com/{tenant_id}"
+        authority=f"https://login.microsoftonline.com/{tenant_id}",
     )
 
     response = app.acquire_token_for_client(scopes=["https://management.azure.com/.default"])
@@ -102,10 +102,14 @@ def get_analytics_rules_arm(subscription_id, resource_group_name, workspace_name
 
     headers = {
         "Authorization": f"Bearer {token}",
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
     }
 
-    response = requests.get(url, headers=headers, timeout=30)
+    response = requests.get(
+        url, 
+        headers=headers, 
+        timeout=30,
+    )
     response.raise_for_status()
     data = response.json()
     return pd.json_normalize(data['value'])
@@ -147,19 +151,18 @@ usage_df = pd.DataFrame([item for item in results.tables[0].rows])
 usage_df.columns = ["DataType"]
 
 active_tables_df = all_tables_df[
-    all_tables_df["schema.name"].
-    isin(set(usage_df["DataType"].
-    dropna().astype(str)))].
-    reset_index(drop=True).copy()
+    all_tables_df["schema.name"]
+    .isin(set(usage_df["DataType"]
+    .dropna().astype(str)))].reset_index(drop=True).copy()
 ```
 
 ### Get Analytics and Detection Rules
-Using the functions defined above we can get the Analytics Rules. We'll also add a `rule_source` column to the DataFrame and populate it with the source platform, this will be useful after we look at pulling tables and rules from Defender.
+Using the functions defined above we can get the Analytics Rules. We'll also add a `platform` column to the DataFrame and populate it with the source platform, this will be useful after we look at pulling tables and rules from Defender.
 
 ```python
-analytics_rules_arm_df = get_analytics_rules_arm()
+analytics_rules_arm_df = get_analytics_rules_arm(subscription_id, resource_group_name, workspace_name)
 
-analytics_rules_arm_df["rule_source"] = "Sentinel"
+analytics_rules_arm_df["platform"] = "Sentinel"
 ```
 
 ### Extract
@@ -178,7 +181,7 @@ def extract_tables(query, known_tables):
     tokens = set(re.findall(r"\b[A-Za-z_][A-Za-z0-9_]*\b", query))
     return sorted(tokens & known_tables)
 
-known_tables = set(all_tables_df["name"])
+known_tables = set(all_tables_df["schema.name"])
 
 analytics_rules_arm_df["tables"] = (
     analytics_rules_arm_df["properties.query"]

@@ -51,7 +51,7 @@ def get_graph_api_token():
     app = ConfidentialClientApplication(
         client_id=client_id,
         client_credential=client_secret,
-        authority=f"https://login.microsoftonline.com/{tenant_id}"
+        authority=f"https://login.microsoftonline.com/{tenant_id}",
     )
 
     response = app.acquire_token_for_client(scopes=["https://graph.microsoft.com/.default"])
@@ -76,7 +76,7 @@ def get_hunting_schema():
     response = requests.get(
         url,
         headers=headers,
-        timeout=30
+        timeout=30,
     )
 
     response.raise_for_status()
@@ -86,18 +86,18 @@ def get_hunting_schema():
 
 ### Get detection rules
 ```python
-def get_detectio_rules():
-    url = "https://graph.microsoft.com/beta/security/detectionRules"
+def get_detection_rules():
+    url = "https://graph.microsoft.com/beta/security/rules/detectionRules"
     token = get_graph_api_token()
     headers = {
         "Authorization": f"Bearer {token}",
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
     }
 
     response = requests.get(
         url,
         headers=headers,
-        timeout=30
+        timeout=30,
     )
 
     response.raise_for_status()
@@ -130,7 +130,7 @@ We'll use the `extract_tables` function from [part 2](./002-extract-tables.md) t
 
 ```python
 detection_rules_df["tables"] = (
-    detection_rules_df["queryConditions.queryText"]
+    detection_rules_df["queryCondition.queryText"]
     .fillna("")
     .apply(lambda q: extract_tables(q, set(hunting_schema_df["name"])))
 )
@@ -138,11 +138,11 @@ detection_rules_df["tables"] = (
 
 ### Reflect
 At this point we have:
-- Tables from Defender XDR and Log Analytics
-- Detection rules from Defender XDR and Sentinel
-- Tables associated with Sentinel rules
-- Tables associated with Defender XDR rules
+- Tables from Defender XDR
+    - and associated Defender XDR Detection Rules
 - Tables and their configuration (retention and plan) from Log Analytics
+    - and associated Sentinel Analytics Rules
+- Detection rules from Defender XDR and Sentinel
 
 ## Wrap up
 Next time we'll look at normalizing our table DataFrames so that we have one DataFrame for all detection rules and one DataFrame for all tables.
