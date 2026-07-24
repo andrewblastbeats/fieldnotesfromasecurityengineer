@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Analyzing active tables, pt 4
-date: 2026-07-17
+date: 2026-07-24
 tags:
     - sentinel
     - xdr
@@ -11,6 +11,7 @@ tags:
     - python
     - kql
     - pandas
+    - data enrichment
 ---
 Orginally I wanted to have this entry focus on normalization, via mapping of features, the Analytics and Detection Rule DataFrames. But after digging into the schemas of the detection tables for both Defender and Sentinel, it went from what I thought was going to be a relatively straightforward exercise to looking at an architectural concern. I was comparing different implementation of the same underlying concept: detection engineering. Microsoft has acknowledged that the features are different between detection rules in Defender and Sentinel but have not provided much context. A future series might look at this and how we might create a canonical data model for detection engineering.
 
