@@ -153,5 +153,9 @@ all_tables_with_rules_df[["name", "run_count", "alert_count", "rules", "platform
 Now we have a single DataFrame that provide a unified view of every table referenced by our detection content. For each table, we can see how many detection rules reference it, how frequently rules are executing that reference those tables, the name of the rules, and whether the table is used by detection rules in Sentinel, Defender, or both.
 
 We get a complete picture of how our detection content depends on each table and provides the foundation for making informed decisions about data retention, ingestion routing and costs, and identifying tables that may no longer providing value.
+
+## What's next?
+I haven't fully fleshed out what I want to dive into next, but I am open to suggestions. There might be a few weeks before the next post as I have to write a final paper for my Responsible Data Science class. 
+
 ## References
 Kefallonitis, A. (2026). XDRLogRaider, https://github.com/akefallonitis/xdrlograider 
