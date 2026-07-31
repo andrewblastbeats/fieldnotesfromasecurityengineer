@@ -150,6 +150,8 @@ all_tables_with_rules_df[["name", "run_count", "alert_count", "rules", "platform
 | ... | ...                  | ...         | ...       | ...                                                   | ...        |
 
 ## Wrap up
+It is important to remember that we extracted the tables used in the detection rules. So while we might expect to see `OfficeActivity` associated with Defender, if detection rules have not been migrated from Sentinel, the table will only appear as a Sentinel table in our analysis. This dataset reflect how your detection content is currently implemented. 
+
 Now we have a single DataFrame that provide a unified view of every table referenced by our detection content. For each table, we can see how many detection rules reference it, how frequently rules are executing that reference those tables, the name of the rules, and whether the table is used by detection rules in Sentinel, Defender, or both.
 
 We get a complete picture of how our detection content depends on each table and provides the foundation for making informed decisions about data retention, ingestion routing and costs, and identifying tables that may no longer providing value.
