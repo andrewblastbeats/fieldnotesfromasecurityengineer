@@ -139,7 +139,7 @@ all_tables_with_rules_df.drop(
 all_tables_with_rules_df[["name", "run_count", "alert_count", "rules", "platform]]
 ```
 |     | name                 | alert_count | run_count | rules                                                 | platform   |
-| --- | -------------------- | ------------| --------- | ----------------------------------------------------- | --------   |
+| --- | -------------------- | ----------- | --------- | ----------------------------------------------------- | ---------- |
 | 0   | OfficeActivity       | 10.0        |  42353.0  | [Mass File Download]                                  | [Sentinel] |
 | 1   | Operation            | 10.0        |  42353.0  | [Mass File Download]                                  | [Sentinel] |
 | 2   | SigninLogs           | 85.0        |  9484.0   | [Risky User Sign-In, Insider Risk - Risky User Access, Custom detection rule 1, Custom detection rule 3] | [Sentinel, Defender] |
