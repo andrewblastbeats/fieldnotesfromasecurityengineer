@@ -138,6 +138,7 @@ all_tables_with_rules_df.drop(
 
 all_tables_with_rules_df[["name", "run_count", "alert_count", "rules", "platform]]
 ```
+
 |     | name                 | alert_count | run_count | rules                                                 | platform   |
 | --- | -------------------- | ----------- | --------- | ----------------------------------------------------- | ---------- |
 | 0   | OfficeActivity       | 10.0        |  42353.0  | [Mass File Download]                                  | [Sentinel] |
