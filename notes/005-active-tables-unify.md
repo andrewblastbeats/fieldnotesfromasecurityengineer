@@ -52,7 +52,7 @@ Let's do some operations on the DataFrame to prep them for the merge.
 We'll first make sure each DataFrame has the correct associated platform.
 
 ```python
-sentinel_tables_with_rules_df["platform"] = "Sentinel
+sentinel_tables_with_rules_df["platform"] = "Sentinel"
 defender_tables_with_rules_df["platform"] = "Defender"
 ```
 
@@ -142,7 +142,7 @@ all_tables_with_rules_df[["name", "run_count", "alert_count", "rules", "platform
 | --- | -------------------- | ------------| --------- | ----------------------------------------------------- | -------- |
 | 0   | OfficeActivity       | 10.0        |  42353.0  | [Mass File Download]                                  | [Sentinel] |
 | 1   | Operation            | 10.0        |  42353.0  | [Mass File Download]                                  | [Sentinel] |
-| 2   | SigninLogs           | 85.0        |  9484.0   | [Risky User Sign-In, Insider Risk - Risky User Access, Custom detection rule 1, Custom detection rule 3]| [Sentinel, Defender] |
+| 2   | SigninLogs           | 85.0        |  9484.0   | [Risky User Sign-In, Insider Risk - Risky User Access, Custom detection rule 1, Custom detection rule 3] | [Sentinel, Defender] |
 | 3   | Syslog               | 0.0         |  30.0     | [Failed logon attempts in authpriv]                   | [Sentinel] |
 | 4   | Watchlist            | 1.0         |  120.0    | [Insider Risk - Risky User Access]                    | [Sentinel] |
 | 5   | DeviceProcessEvents  | 78.0        |  720.0    | [Custom detection rule 2]                             | [Defender] |
