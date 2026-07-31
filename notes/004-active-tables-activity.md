@@ -332,8 +332,9 @@ For now, I'll leave the enriching of the Defender data as an exercise to the rea
 ## Wrap up
 We took a closer look at how Defender and Sentinel detection rules behave in practice by enriching their rule inventories with alert and run metrics. We were able to compare not just which rules exist, but how often they run, how many alerts they generate, and which underlying tables they depend on. We then transformed the data to view it from the perspective of the tables, which allowed us to see which workspace data sources are being used by detection engineering. 
 
-Next time (as long as I don't think of something else) we'll normalize these tables!
+Next time (as long as I don't think of something else) we'll normalize these tables! Here's [post 5](./005-active-tables-unify.md).
 
 ## References
-- Kumar, M. (2026). Anatomy of the change, https://techcommunity.microsoft.com/blog/microsoftsentinelblog/anatomy-of-the-change/4527934
-- Kumar, M. (2026). Detection and automation, reimagined, https://techcommunity.microsoft.com/blog/microsoftsentinelblog/detection-and-automation-reimagined/4527933
+Kumar, M. (2026). Anatomy of the change, https://techcommunity.microsoft.com/blog/microsoftsentinelblog/anatomy-of-the-change/4527934
+
+Kumar, M. (2026). Detection and automation, reimagined, https://techcommunity.microsoft.com/blog/microsoftsentinelblog/detection-and-automation-reimagined/4527933
