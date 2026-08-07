@@ -64,8 +64,8 @@ The Defender custom detections data dictionary is based on the featured columns 
 | tables             | list[str] | The tables used in the rule query                           | DeviceNetworkEvents     |
 | name               | string    | Rule display name                                           | 3rd Party Apps          |
 | severity           | string    | The severity of the alert created from the rule             | Informational           |
-| run_count          | float64   | The number of alerts the rule generates each run            | 720.0                   |
-| alert_count        | float64   | The number of alerts created as a result of rules being run referencing the table | 1.0 |
+| run_count          | float64   | The number of alerts the rule generates each run            | 360.0                   |
+| alert_count        | float64   | The number of alerts created as a result of rules being run referencing the table | 5.0 |
 | tactics            | list[str] | The Mitre ATT&CK tactics that are covered by the rule       | [Discovery, Collection] |
 | techniques         | list[str] | The Mitre ATT&CK techniques that are covered by the rule    | [T1595, T1134]          |
 | platform           | list[str] | Source platform                                             | Defender                |
