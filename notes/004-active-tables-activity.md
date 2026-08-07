@@ -13,7 +13,7 @@ tags:
     - pandas
     - data enrichment
 ---
-Orginally I wanted to have this entry focus on normalization, via mapping of features, the Analytics and Detection Rule DataFrames. But after digging into the schemas of the detection tables for both Defender and Sentinel, it went from what I thought was going to be a relatively straightforward exercise to looking at an architectural concern. I was comparing different implementation of the same underlying concept: detection engineering. Microsoft has acknowledged that the features are different between detection rules in Defender and Sentinel but have not provided much context. A future series might look at this and how we might create a canonical data model for detection engineering.
+Originally, I wanted to have this entry focus on normalization, via mapping of features, the Analytics and Detection Rule DataFrames. But after digging into the schemas of the detection tables for both Defender and Sentinel, it went from what I thought was going to be a relatively straightforward exercise to looking at an architectural concern. I was comparing different implementation of the same underlying concept: detection engineering. Microsoft has acknowledged that the features are different between detection rules in Defender and Sentinel but have not provided much context. A future series might look at this and how we might create a canonical data model for detection engineering.
 
 
 <!--more-->
@@ -30,7 +30,7 @@ Orginally I wanted to have this entry focus on normalization, via mapping of fea
 - [References](#references)
 
 ## Introduction
-In this post we're going to look at how the detection rules in Defender and Sentinel are being used and their metrics, like how many time it ran. We'll also aggregate the detection rule runs to see how often Log Analytics and Defender tables are being used in detection rules.
+In this note we're going to look at how the detection rules in Defender and Sentinel are being used and their metrics, like how many time it ran. We'll also aggregate the detection rule runs to see how often Log Analytics and Defender tables are being used in detection rules.
 
 One thing to note, is that 
 
@@ -282,7 +282,7 @@ analytics_rules_df["alerts_per_run"] = analytics_rules_df["alert_count"] / analy
 Now we have a the ids, alert counts, run counts, and table names associated with each Sentinel detection rule.
 
 ```python
-analytics_rules_df[["name", "alert_count", "run_count", "tables", "platform"]]
+analytics_rules_df[["name", "alerts_per_run", "alert_count", "run_count", "tables", "platform"]]
 ```
 
 |     | name                              | alerts_per_run | alert_count | run_count | tables      | platform |
