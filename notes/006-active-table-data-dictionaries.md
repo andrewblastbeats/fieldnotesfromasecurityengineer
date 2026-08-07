@@ -20,6 +20,10 @@ Data dictionaries, I feel, have the best fit to help wrap up this series by givi
 
 ## Table of contents
 - [Introduction](#introduction)
+- [Active tables data dictionary](#active-tables-data-dictionary)
+- [Sentinel analytics rule data dictionary](#sentinel-analytics-rule-data-dictionary)
+- [Defender custom detections data dictionary](#defender-custom-detections-data-dictionary)
+- [Wrap up](#wrap-up)
 
 ## Introduction
 A data dictionary defines every field in a dataset, for each column, the dictionary describes what the field is, the field's data type, allowed or expected values, and units. It acts as a reference key that informs users of what the data actually is.
@@ -37,7 +41,7 @@ Here's the data dictionary for the `all_tables_with_rules_df` DataFrame from the
 | run_count      | float64       | The number of times rules associated with the table have been run | 720.0 |
 | alert_count    | float64       | The number of alerts created as a result of rules being run referencing the table | 1.0 |
 
-## Sentinel analytics rule data dictionary 
+## Sentinel analytics rule data dictionary
 Here's the data dictionary to support the `analytics_rules_df` DataFrame from [post 4](./004-active-tables-activity.md)/
 
 | field              | type      | description                                                 | example                 |
